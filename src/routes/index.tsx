@@ -60,13 +60,13 @@ function Index() {
 
         <button
           type="button"
-          className="w-full rounded-full border-2 border-primary bg-[oklch(0.2_0.05_300)] py-3.5 text-[22px] font-normal text-primary shadow-[0_0_20px_-4px_var(--primary)] transition-colors hover:bg-[oklch(0.25_0.05_300)]"
+          className="w-full rounded-2xl border-2 border-[oklch(0.72_0.19_45)] bg-[oklch(0.18_0.05_300)] py-4 text-[22px] font-medium text-[oklch(0.82_0.17_75)] shadow-[0_0_18px_-2px_oklch(0.72_0.19_45),inset_0_0_12px_-4px_oklch(0.72_0.19_45)] transition-colors hover:bg-[oklch(0.22_0.05_300)]"
         >
           Sign Up
         </button>
         <button
           type="button"
-          className="w-full rounded-full border-2 border-foreground/80 bg-transparent py-3.5 text-[22px] font-normal text-foreground shadow-[0_0_20px_-4px_oklch(0.9_0.02_300)] transition-colors hover:bg-foreground/5"
+          className="w-full rounded-2xl border-2 border-[oklch(0.75_0.15_290)] bg-[oklch(0.18_0.05_300)] py-4 text-[22px] font-medium text-[oklch(0.92_0.03_290)] shadow-[0_0_18px_-2px_oklch(0.75_0.15_290),inset_0_0_12px_-4px_oklch(0.75_0.15_290)] transition-colors hover:bg-[oklch(0.22_0.05_300)]"
         >
           Log In
         </button>
