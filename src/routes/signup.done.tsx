@@ -12,7 +12,7 @@ function DoneStep() {
       title="Tudo pronto!"
       subtitle="Bem-vindo ao Project Z"
       footer={
-        <Link to="/">
+        <Link to="/home">
           <NeonButton>Entrar</NeonButton>
         </Link>
       }
