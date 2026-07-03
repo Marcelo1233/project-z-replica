@@ -36,7 +36,7 @@ function Index() {
         />
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/60 to-transparent pb-6 pt-16">
           <h1 className="text-center text-[26px] font-normal tracking-wide text-foreground/95">
-            Meet Metaverse Friends!
+            Conheça amigos no Metaverso!
           </h1>
         </div>
       </div>
@@ -53,9 +53,9 @@ function Index() {
             {agreed && <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} />}
           </button>
           <span>
-            By continuing, you agree to Project Z's{" "}
-            <a href="#" className="text-[oklch(0.65_0.14_195)] underline">Terms of Service</a> and{" "}
-            <a href="#" className="text-[oklch(0.65_0.14_195)] underline">Privacy Policy</a>.
+            Ao continuar, você concorda com os{" "}
+            <a href="#" className="text-[oklch(0.65_0.14_195)] underline">Termos de Serviço</a> e a{" "}
+            <a href="#" className="text-[oklch(0.65_0.14_195)] underline">Política de Privacidade</a> do Project Z.
           </span>
         </label>
 
@@ -63,17 +63,17 @@ function Index() {
           to="/signup/name"
           className="block w-full rounded-2xl border-2 border-[oklch(0.72_0.19_45)] bg-[oklch(0.18_0.05_300)] py-4 text-center text-[22px] font-medium text-[oklch(0.82_0.17_75)] shadow-[0_0_18px_-2px_oklch(0.72_0.19_45),inset_0_0_12px_-4px_oklch(0.72_0.19_45)] transition-colors hover:bg-[oklch(0.22_0.05_300)]"
         >
-          Sign Up
+          Cadastrar
         </Link>
         <button
           type="button"
           className="w-full rounded-2xl border-2 border-[oklch(0.75_0.15_290)] bg-[oklch(0.18_0.05_300)] py-4 text-[22px] font-medium text-[oklch(0.92_0.03_290)] shadow-[0_0_18px_-2px_oklch(0.75_0.15_290),inset_0_0_12px_-4px_oklch(0.75_0.15_290)] transition-colors hover:bg-[oklch(0.22_0.05_300)]"
         >
-          Log In
+          Entrar
         </button>
 
         <p className="pt-1 text-center text-[13px] text-foreground/70">
-          Version 2.13.0-23200
+          Versão 2.13.0-23200
         </p>
       </div>
     </main>

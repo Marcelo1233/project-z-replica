@@ -17,9 +17,9 @@ const OPTIONS: Array<{
   glow: string;
   bg: string;
 }> = [
-  { id: "male", label: "Male", Icon: Mars, color: "oklch(0.75 0.15 220)", glow: "oklch(0.75 0.15 220)", bg: "oklch(0.22 0.08 240)" },
-  { id: "female", label: "Female", Icon: Venus, color: "oklch(0.7 0.22 320)", glow: "oklch(0.7 0.22 320)", bg: "oklch(0.22 0.1 320)" },
-  { id: "nb", label: "Non-binary", Icon: Transgender, color: "oklch(0.7 0.15 60)", glow: "oklch(0.7 0.15 60)", bg: "oklch(0.22 0.08 60)" },
+  { id: "male", label: "Masculino", Icon: Mars, color: "oklch(0.75 0.15 220)", glow: "oklch(0.75 0.15 220)", bg: "oklch(0.22 0.08 240)" },
+  { id: "female", label: "Feminino", Icon: Venus, color: "oklch(0.7 0.22 320)", glow: "oklch(0.7 0.22 320)", bg: "oklch(0.22 0.1 320)" },
+  { id: "nb", label: "Não-binário", Icon: Transgender, color: "oklch(0.7 0.15 60)", glow: "oklch(0.7 0.15 60)", bg: "oklch(0.22 0.08 60)" },
 ];
 
 function GenderStep() {
@@ -27,10 +27,10 @@ function GenderStep() {
   const [sel, setSel] = useState<Gender | null>(null);
   return (
     <SignupShell
-      title="Select Gender"
-      subtitle="You can't modify your gender after the registration"
+      title="Selecione o Sexo"
+      subtitle="Você não poderá alterar o sexo após o cadastro"
       back="/signup/age"
-      footer={<NeonButton disabled={!sel} onClick={() => nav({ to: "/signup/bio" })}>Next</NeonButton>}
+      footer={<NeonButton disabled={!sel} onClick={() => nav({ to: "/signup/bio" })}>Próximo</NeonButton>}
     >
       <div className="flex items-start justify-center gap-6 pt-2">
         {OPTIONS.map(({ id, label, Icon, color, glow, bg }) => {

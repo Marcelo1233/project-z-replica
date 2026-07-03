@@ -11,15 +11,15 @@ function NameStep() {
   const [name, setName] = useState("");
   return (
     <SignupShell
-      title="What's your name?"
-      subtitle="This is how others will see you"
-      footer={<NeonButton disabled={!name.trim()} onClick={() => nav({ to: "/signup/age" })}>Next</NeonButton>}
+      title="Qual é o seu nome?"
+      subtitle="É assim que os outros vão te ver"
+      footer={<NeonButton disabled={!name.trim()} onClick={() => nav({ to: "/signup/age" })}>Próximo</NeonButton>}
     >
       <input
         autoFocus
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="Your name"
+        placeholder="Seu nome"
         className="w-full rounded-xl border border-[oklch(0.35_0.08_300)] bg-[oklch(0.16_0.05_300)] px-4 py-4 text-[16px] text-foreground placeholder:text-foreground/40 focus:border-[oklch(0.65_0.14_195)] focus:outline-none"
       />
     </SignupShell>
