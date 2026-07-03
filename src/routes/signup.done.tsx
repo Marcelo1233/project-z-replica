@@ -9,11 +9,11 @@ export const Route = createFileRoute("/signup/done")({
 function DoneStep() {
   return (
     <SignupShell
-      title="You're all set!"
-      subtitle="Welcome to Project Z"
+      title="Tudo pronto!"
+      subtitle="Bem-vindo ao Project Z"
       footer={
         <Link to="/">
-          <NeonButton>Enter</NeonButton>
+          <NeonButton>Entrar</NeonButton>
         </Link>
       }
     >
