@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SignupNameRouteImport } from './routes/signup.name'
+import { Route as SignupAgeRouteImport } from './routes/signup.age'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const SignupNameRoute = SignupNameRouteImport.update({
   path: '/signup/name',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SignupAgeRoute = SignupAgeRouteImport.update({
+  id: '/signup/age',
+  path: '/signup/age',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/signup/age': typeof SignupAgeRoute
   '/signup/name': typeof SignupNameRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/signup/age': typeof SignupAgeRoute
   '/signup/name': typeof SignupNameRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/signup/age': typeof SignupAgeRoute
   '/signup/name': typeof SignupNameRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/signup/name'
+  fullPaths: '/' | '/signup/age' | '/signup/name'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/signup/name'
-  id: '__root__' | '/' | '/signup/name'
+  to: '/' | '/signup/age' | '/signup/name'
+  id: '__root__' | '/' | '/signup/age' | '/signup/name'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SignupAgeRoute: typeof SignupAgeRoute
   SignupNameRoute: typeof SignupNameRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SignupNameRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/signup/age': {
+      id: '/signup/age'
+      path: '/signup/age'
+      fullPath: '/signup/age'
+      preLoaderRoute: typeof SignupAgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SignupAgeRoute: SignupAgeRoute,
   SignupNameRoute: SignupNameRoute,
 }
 export const routeTree = rootRouteImport
