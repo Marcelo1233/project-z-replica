@@ -12,10 +12,10 @@ function AgeStep() {
   const valid = /^\d+$/.test(age) && Number(age) >= 13 && Number(age) <= 120;
   return (
     <SignupShell
-      title="How old are you?"
-      subtitle="You can't modify your age after the registration"
+      title="Quantos anos você tem?"
+      subtitle="Você não poderá alterar a idade após o cadastro"
       back="/signup/name"
-      footer={<NeonButton disabled={!valid} onClick={() => nav({ to: "/signup/gender" })}>Next</NeonButton>}
+      footer={<NeonButton disabled={!valid} onClick={() => nav({ to: "/signup/gender" })}>Próximo</NeonButton>}
     >
       <input
         autoFocus
