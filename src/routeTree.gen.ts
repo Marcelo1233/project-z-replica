@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SignupNameRouteImport } from './routes/signup.name'
+import { Route as SignupGenderRouteImport } from './routes/signup.gender'
+import { Route as SignupDoneRouteImport } from './routes/signup.done'
+import { Route as SignupBioRouteImport } from './routes/signup.bio'
+import { Route as SignupAgeRouteImport } from './routes/signup.age'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SignupNameRoute = SignupNameRouteImport.update({
+  id: '/signup/name',
+  path: '/signup/name',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupGenderRoute = SignupGenderRouteImport.update({
+  id: '/signup/gender',
+  path: '/signup/gender',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupDoneRoute = SignupDoneRouteImport.update({
+  id: '/signup/done',
+  path: '/signup/done',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupBioRoute = SignupBioRouteImport.update({
+  id: '/signup/bio',
+  path: '/signup/bio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupAgeRoute = SignupAgeRouteImport.update({
+  id: '/signup/age',
+  path: '/signup/age',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/signup/age': typeof SignupAgeRoute
+  '/signup/bio': typeof SignupBioRoute
+  '/signup/done': typeof SignupDoneRoute
+  '/signup/gender': typeof SignupGenderRoute
+  '/signup/name': typeof SignupNameRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/signup/age': typeof SignupAgeRoute
+  '/signup/bio': typeof SignupBioRoute
+  '/signup/done': typeof SignupDoneRoute
+  '/signup/gender': typeof SignupGenderRoute
+  '/signup/name': typeof SignupNameRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/signup/age': typeof SignupAgeRoute
+  '/signup/bio': typeof SignupBioRoute
+  '/signup/done': typeof SignupDoneRoute
+  '/signup/gender': typeof SignupGenderRoute
+  '/signup/name': typeof SignupNameRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/signup/age'
+    | '/signup/bio'
+    | '/signup/done'
+    | '/signup/gender'
+    | '/signup/name'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/signup/age'
+    | '/signup/bio'
+    | '/signup/done'
+    | '/signup/gender'
+    | '/signup/name'
+  id:
+    | '__root__'
+    | '/'
+    | '/signup/age'
+    | '/signup/bio'
+    | '/signup/done'
+    | '/signup/gender'
+    | '/signup/name'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SignupAgeRoute: typeof SignupAgeRoute
+  SignupBioRoute: typeof SignupBioRoute
+  SignupDoneRoute: typeof SignupDoneRoute
+  SignupGenderRoute: typeof SignupGenderRoute
+  SignupNameRoute: typeof SignupNameRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/signup/name': {
+      id: '/signup/name'
+      path: '/signup/name'
+      fullPath: '/signup/name'
+      preLoaderRoute: typeof SignupNameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup/gender': {
+      id: '/signup/gender'
+      path: '/signup/gender'
+      fullPath: '/signup/gender'
+      preLoaderRoute: typeof SignupGenderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup/done': {
+      id: '/signup/done'
+      path: '/signup/done'
+      fullPath: '/signup/done'
+      preLoaderRoute: typeof SignupDoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup/bio': {
+      id: '/signup/bio'
+      path: '/signup/bio'
+      fullPath: '/signup/bio'
+      preLoaderRoute: typeof SignupBioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup/age': {
+      id: '/signup/age'
+      path: '/signup/age'
+      fullPath: '/signup/age'
+      preLoaderRoute: typeof SignupAgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SignupAgeRoute: SignupAgeRoute,
+  SignupBioRoute: SignupBioRoute,
+  SignupDoneRoute: SignupDoneRoute,
+  SignupGenderRoute: SignupGenderRoute,
+  SignupNameRoute: SignupNameRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

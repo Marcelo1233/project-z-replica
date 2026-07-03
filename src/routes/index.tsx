@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Check } from "lucide-react";
 import heroImg from "@/assets/metaverse-hero.jpg";
@@ -58,12 +59,12 @@ function Index() {
           </span>
         </label>
 
-        <button
-          type="button"
-          className="w-full rounded-2xl border-2 border-[oklch(0.72_0.19_45)] bg-[oklch(0.18_0.05_300)] py-4 text-[22px] font-medium text-[oklch(0.82_0.17_75)] shadow-[0_0_18px_-2px_oklch(0.72_0.19_45),inset_0_0_12px_-4px_oklch(0.72_0.19_45)] transition-colors hover:bg-[oklch(0.22_0.05_300)]"
+        <Link
+          to="/signup/name"
+          className="block w-full rounded-2xl border-2 border-[oklch(0.72_0.19_45)] bg-[oklch(0.18_0.05_300)] py-4 text-center text-[22px] font-medium text-[oklch(0.82_0.17_75)] shadow-[0_0_18px_-2px_oklch(0.72_0.19_45),inset_0_0_12px_-4px_oklch(0.72_0.19_45)] transition-colors hover:bg-[oklch(0.22_0.05_300)]"
         >
           Sign Up
-        </button>
+        </Link>
         <button
           type="button"
           className="w-full rounded-2xl border-2 border-[oklch(0.75_0.15_290)] bg-[oklch(0.18_0.05_300)] py-4 text-[22px] font-medium text-[oklch(0.92_0.03_290)] shadow-[0_0_18px_-2px_oklch(0.75_0.15_290),inset_0_0_12px_-4px_oklch(0.75_0.15_290)] transition-colors hover:bg-[oklch(0.22_0.05_300)]"
