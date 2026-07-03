@@ -32,7 +32,7 @@ export function SignupShell({ title, subtitle, back, children, footer }: Props) 
             <ArrowLeft className="h-5 w-5" />
           </Link>
         ) : <span className="h-10 w-10" />}
-        <button type="button" className="text-[15px] text-foreground/80">Help</button>
+        <button type="button" className="text-[15px] text-foreground/80">Ajuda</button>
       </div>
 
       {/* Header */}
