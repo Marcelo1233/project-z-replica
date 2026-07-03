@@ -15,7 +15,7 @@ function BioStep() {
       title="Fale sobre você"
       subtitle="Escreva uma bio curta pra galera te conhecer"
       back="/signup/gender"
-      footer={<NeonButton disabled={bio.trim().length < 3} onClick={() => nav({ to: "/signup/done" })}>Finalizar</NeonButton>}
+      footer={<NeonButton disabled={bio.trim().length < 3} onClick={() => nav({ to: "/signup/account" })}>Próximo</NeonButton>}
     >
       <textarea
         autoFocus
